@@ -1,0 +1,35 @@
+<body>
+    <div class="container">
+     <table class="table table-dark">
+         <thead>
+           <button type="button" (click)="addEmpolyee()" class="btn btn-info add">
+             <i class="fas fa-plus"></i>
+           </button>
+           <tr>
+             <th scope="col">اسم المشروع</th>
+             <th scope="col">وصف المشروع</th>
+             <th scope="col">اسم المدير</th>
+             <th scope="col"></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>ييب</td>
+             <td>يبي</td>
+             <td>يبسيبي</td>
+             <td>
+                <mat-menu #appMenu="matMenu">
+                    <button mat-menu-item (click)="remove()">حذف</button>
+                    <button mat-menu-item (click)="edit()">تعديل</button>
+                    <button mat-menu-item (click)="view()">عرض</button>
+                </mat-menu>
+                   
+                <button mat-icon-button [matMenuTriggerFor]="appMenu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+             </td>
+           </tr>
+         </tbody>
+     </table>
+    </div>
+ </body>
