@@ -1,0 +1,15 @@
+* {
+    direction: rtl;
+}
+
+.jumbotron {
+    border-radius: 16px;
+}
+
+.jumbotron h3  {
+    text-align: center;
+}
+
+.jumbotron p, .jumbotron span {
+    text-align: right;
+}
