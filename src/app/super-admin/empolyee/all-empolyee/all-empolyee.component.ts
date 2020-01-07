@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-all-empolyee',
@@ -7,17 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllEmpolyeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
   remove() {
-
+    console.log("Ok")
   }
 
   edit() {
-
+    this.router.navigate(['./super-admin/empolyee/all-empolyee/edit-empolyee/1'])
   }
 
   view() {
@@ -25,7 +28,7 @@ export class AllEmpolyeeComponent implements OnInit {
   }
 
   addEmpolyee() {
-    
+      this.router.navigate(["./super-admin/empolyee/add-empolyee"])
   }
 
 }

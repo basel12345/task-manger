@@ -1,1 +1,38 @@
-<p>edit-project works!</p>
+<body>
+    <div class="container">
+        <form  [formGroup]="EmpoleeFrom" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>اسم المشروع</label>
+                        <input  formControlName="nameProject" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.nameProject.errors }">
+                        <div *ngIf="submitted && f.nameProject.errors" class="invalid-feedback">
+                            <div class="alert alert-danger" *ngIf="f.nameProject.errors.required">يرجى التأكد من ادخال اسم المشروع</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>وصف المشروع</label>
+                        <textarea  formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></textarea>
+                        <div *ngIf="submitted && f.nameProject.errors" class="invalid-feedback">
+                            <div class="alert alert-danger" *ngIf="f.nameProject.errors.required">يرجى التأكد من ادخال وصف المشروع</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>مدير المشروع</label>
+                        <select  formControlName="manger" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.manger.errors }">
+                            <option value="1">sdsada</option>
+                        </select>
+                        <div *ngIf="submitted && f.manger.errors" class="invalid-feedback">
+                            <div class="alert alert-danger" *ngIf="f.manger.errors.required">يرجى التأكد من ادخال مدير المشروع</div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">حفظ</button>
+            </div>
+        </form>
+    </div>
+</body>

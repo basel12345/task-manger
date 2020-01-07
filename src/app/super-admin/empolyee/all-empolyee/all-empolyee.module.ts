@@ -4,12 +4,17 @@ import { CommonModule } from '@angular/common';
 import { DemoMaterialModule } from 'src/app/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AllEmpolyeeComponent } from './all-empolyee.component';
+import { EditEmpolyeeComponent } from './edit-empolyee/edit-empolyee.component';
 
 const routes: Routes = [
 	{
       path: '',
       component: AllEmpolyeeComponent,
-    }
+  },
+  {
+    path: 'edit-empolyee/:id',
+    component: EditEmpolyeeComponent
+  }
 ];
 
 @NgModule({
@@ -20,7 +25,7 @@ const routes: Routes = [
     DemoMaterialModule
 ],
   providers:[],
-  declarations: [AllEmpolyeeComponent]
+  declarations: [AllEmpolyeeComponent, EditEmpolyeeComponent]
 })
 
 
