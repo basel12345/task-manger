@@ -1,0 +1,9 @@
+* {
+    direction: rtl;
+}
+
+.add {
+    float: right;
+    margin: 13px;
+    padding-top: 7px;
+}

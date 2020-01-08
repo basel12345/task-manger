@@ -10,6 +10,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 export class AddEmpolyeeComponent implements OnInit {
     EmpoleeyFrom: FormGroup;
     submitted = false;
+    id: any;
     constructor(
         private formBuilder: FormBuilder
     ) { }
@@ -19,7 +20,8 @@ export class AddEmpolyeeComponent implements OnInit {
         name: ['', Validators.required],
         email: ['',  [Validators.required, Validators.email]],
         telephone: ['',  Validators.required],
-        role: ['', Validators.required]
+        role: ['', Validators.required],
+        deleteProject: ['', Validators.required]
       });
     }
   
@@ -34,6 +36,10 @@ export class AddEmpolyeeComponent implements OnInit {
           return;
       }
       this.EmpoleeyFrom.reset();
+    }
+
+    getRoleId(event) {
+      this.id = event;
     }
 
 }

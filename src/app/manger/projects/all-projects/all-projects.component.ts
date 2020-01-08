@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-all-projects',
@@ -51,16 +51,15 @@ export class AllProjectsComponent implements OnInit {
 
   // edit a project
   edit() {
-    this.router.navigate(['./super-admin/all-projects/edit-project/1'])
+    this.router.navigate(['./manger/projects/all-projects/edit-project/1'])
   }
 
   // view a project
   view() {
-    this.router.navigate(['./super-admin/all-projects/view-project/1'])
+    // 
   }
 
   openLg(content) {
     this.modalService.open(content, { size: 'lg' });
   }
-
 }

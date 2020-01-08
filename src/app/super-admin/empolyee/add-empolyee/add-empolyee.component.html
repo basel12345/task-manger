@@ -33,7 +33,7 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label>الدور الوظيفي</label>
-                        <select formControlName="role" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
+                        <select formControlName="role" (ngModelChange)="getRoleId($event)" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
                             <option value="1">super admin</option>
                             <option value="2">Manger</option>
                             <option value="3">worker</option>
@@ -41,6 +41,15 @@
                         <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
                             <div class="alert alert-danger" *ngIf="f.role.errors.required">يرجى التأكد من ادخال الدور الوظيفي</div>
                         </div>
+                    </div>
+                </div>
+                <div *ngIf="id==2" class="col-sm-12">
+                    <div class="form-group">
+                        <label>امكانية مسح المشروع</label>
+                        <select formControlName="deleteProject" (ngModelChange)="getRoleId($event)" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
+                            <option value="1">نعم</option>
+                            <option value="2">لا</option>
+                        </select>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">حفظ</button>

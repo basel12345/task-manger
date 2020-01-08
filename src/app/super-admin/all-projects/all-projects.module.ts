@@ -30,7 +30,11 @@ const routes: Routes = [
     DemoMaterialModule
 ],
   providers:[],
-  declarations: [AllProjectsComponent, ViewProjectComponent, EditProjectComponent]
+  declarations: [
+    AllProjectsComponent,
+    ViewProjectComponent,
+    EditProjectComponent
+  ]
 })
 
 

@@ -3,8 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { SuperAdminComponent } from './super-admin.component';
 import { DemoMaterialModule } from '../material.module';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AllProjectsComponent } from './all-projects/all-projects.component';
-
 
 const routes: Routes = [
 	{
@@ -13,15 +11,15 @@ const routes: Routes = [
         children:[
             {
               path: 'add-project',
-              loadChildren: './add-project/add-project.module#AddProjectModule'
+              loadChildren: 'src/app/super-admin/add-project/add-project.module#AddProjectModule'
             },
             {
               path: 'all-projects',
-              loadChildren: './all-projects/all-projects.module#AllProjectsModule'
+              loadChildren: 'src/app/super-admin/all-projects/all-projects.module#AllProjectsModule'
             },
             {
               path: 'empolyee',
-              loadChildren: './empolyee/empolyee.module#EmpolyeeModule'
+              loadChildren: 'src/app/super-admin/empolyee/empolyee.module#EmpolyeeModule'
             },
         ]
 	}

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DemoMaterialModule } from 'src/app/material.module';
 import { AddEmpolyeeComponent } from './add-empolyee.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const routes: Routes = [
 	{
@@ -14,6 +14,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    FormsModule,
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(routes),

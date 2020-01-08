@@ -9,6 +9,10 @@ const routes: Routes = [
       path: 'super-admin',
       loadChildren: './super-admin/super-admin.module#SuperAdminModule'
     },
+    {
+      path: 'manger',
+      loadChildren: './manger/manger.module#MangerModule'
+    },
     { path: '**', redirectTo: 'super-admin' }
 ];
 
