@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-    { path: '', redirectTo: 'super-admin', pathMatch: 'full' },
-    { path: 'super-admin', loadChildren: './super-admin/super-admin.module#SuperAdminModule' },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: 'login', loadChildren: './login/login.module#LoginModule' },
     {
       path: 'super-admin',
       loadChildren: './super-admin/super-admin.module#SuperAdminModule'
@@ -13,7 +13,7 @@ const routes: Routes = [
       path: 'manger',
       loadChildren: './manger/manger.module#MangerModule'
     },
-    { path: '**', redirectTo: 'super-admin' }
+    { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
