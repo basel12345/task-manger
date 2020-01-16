@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DemoMaterialModule } from 'src/app/material.module';
 import { EmpolyeeComponent } from './empolyee.component';
-import { AllEmpolyeeComponent } from './all-empolyee/all-empolyee.component';
 
 const routes: Routes = [
 	{
