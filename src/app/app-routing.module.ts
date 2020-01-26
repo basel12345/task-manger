@@ -13,6 +13,10 @@ const routes: Routes = [
       path: 'manger',
       loadChildren: './manger/manger.module#MangerModule'
     },
+    {
+      path: 'worker',
+      loadChildren: './worker/worker.module#WorkerModule'
+    },
     { path: '**', redirectTo: 'login' }
 ];
 

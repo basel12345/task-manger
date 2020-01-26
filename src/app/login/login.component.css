@@ -8,14 +8,14 @@ body {
   font-family: 'Vibur', cursive;
   margin:0
 }
-
+/* 
 .container {
     position: relative;
     top: 396px;
     width: 46%;
     border-radius: 15px;
     direction: rtl;
-}
+} */
 
 .logo {
   text-align: center;
@@ -75,6 +75,14 @@ body {
   }
 }
 
+input {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input::placeholder {
+  color: black;
+  text-align: right;
+}
 
 /* follow me @nodws */
 #btn-twtr{
@@ -102,8 +110,6 @@ body {
 
 
   button {
-    position: relative;
-    left: 183px;
     padding: 10px;
     margin-top: 5px;
   }
@@ -112,3 +118,86 @@ body {
     background-color: white;
     color: #343A40;
   }
+
+  @media only screen and (max-width: 360px) and (min-width: 320px)  {
+    .logo b {
+      font: 100 12vh "Vibur";
+    }
+
+    .container {
+      top: 295px;
+    }
+    
+    button {
+      left: 7px;
+    }
+  }
+
+  @media only screen and (max-width: 375px) and (min-width: 361px)  {
+    .logo b {
+      font: 100 12vh "Vibur";
+    }
+
+    .container {
+      top: 432px;
+    }
+    
+    button {
+      left: 7px;
+    }
+  }
+
+  @media only screen and (max-width: 410px) and (min-width: 376px)  {
+    .logo b {
+      font: 100 11vh "Vibur";
+    }
+
+    button {
+      left: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) and (min-width: 411px)  {
+    .logo b {
+      font: 100 12vh "Vibur";
+    }
+
+    .container {
+      top: 454px;
+    }
+
+    button {
+      left: 26px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) and (min-width: 601px)  {
+    .logo b {
+      font: 100 12vh "Vibur";
+    }
+
+    .container {
+      top: 655px
+    }
+
+    button {
+      left: 113px;
+    }
+  }
+
+
+  @media only screen and (max-width: 1000px) and (min-width: 769px)  {
+    .logo b {
+      font: 100 12vh "Vibur";
+    }
+
+    .container {
+      top: 821px
+    }
+
+    button {
+      left: 164px;
+    }
+  }
+
+  
