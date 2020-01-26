@@ -10,6 +10,7 @@ const routes: Routes = [
 		path: '',
         component: MangerComponent,
         children:[
+            { path: '', redirectTo: 'projects', pathMatch: 'full' },
             {
                 path: 'empolyee',
                 loadChildren: "src/app/manger/empolyee/empolyee.module#EmpolyeeModule"
@@ -17,7 +18,8 @@ const routes: Routes = [
             {
                 path: 'projects',
                 loadChildren: "src/app/manger/projects/projects.module#ProjectsModule"
-            }
+            },
+            { path: '**', redirectTo: 'projects' }
         ]
 	}
 ];

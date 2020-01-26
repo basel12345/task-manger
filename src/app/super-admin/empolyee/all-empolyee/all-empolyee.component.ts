@@ -24,7 +24,7 @@ export class AllEmpolyeeComponent implements OnInit {
   }
 
   view() {
-
+    this.router.navigate(['./worker/profile'])
   }
 
   addEmpolyee() {

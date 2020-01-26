@@ -4,6 +4,9 @@
             <mat-list-item style="color: white;" role="listitem">NAME</mat-list-item>
             <mat-list-item style="color: white;" role="listitem">Email</mat-list-item>
             <mat-list-item style="color: white;" role="listitem">Mobile Number</mat-list-item>
+            <mat-list-item style="color: white;" role="listitem">
+                <ngb-rating [(rate)]="currentRate"></ngb-rating>
+            </mat-list-item>
           </mat-list>          
         <!-- horizontal -->
         <div class="row">
@@ -41,3 +44,8 @@
         </div>
     </div>
 </body>
+<!-- <div>
+    <agm-map [latitude]="location.latitude" [longitude]="location.longitude" [mapTypeId]="location.mapType" [zoom]="location.zoom" (mapClick)="addMarker($event.coords.lat, $event.coords.lng)">
+        <agm-marker [latitude]="location.marker.lat" [longitude]="location.marker.lng"></agm-marker>
+    </agm-map>
+</div> -->

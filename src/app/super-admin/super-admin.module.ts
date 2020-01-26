@@ -9,6 +9,7 @@ const routes: Routes = [
 		path: '',
         component: SuperAdminComponent,
         children:[
+            { path: '', redirectTo: 'all-projects', pathMatch: 'full' },
             {
               path: 'add-project',
               loadChildren: 'src/app/super-admin/add-project/add-project.module#AddProjectModule'
@@ -21,6 +22,7 @@ const routes: Routes = [
               path: 'empolyee',
               loadChildren: 'src/app/super-admin/empolyee/empolyee.module#EmpolyeeModule'
             },
+            { path: '**', redirectTo: 'all-projects' }
         ]
 	}
 ];

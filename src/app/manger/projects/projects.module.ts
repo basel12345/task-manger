@@ -10,6 +10,7 @@ const routes: Routes = [
 		path: '',
         component: ProjectsComponent,
         children:[
+            { path: '', redirectTo: 'all-projects', pathMatch: 'full' },
             {
                 path: 'all-projects',
                 loadChildren: "src/app/manger/projects/all-projects/all-projects.module#AllProjectsModule"
@@ -17,7 +18,8 @@ const routes: Routes = [
             {
               path: 'add-project',
               loadChildren: "src/app/manger/projects/add-project/add-project.module#AddProjectModule"
-            }
+            },
+            { path: '**', redirectTo: 'all-projects' }
         ]
 	}
 ];
