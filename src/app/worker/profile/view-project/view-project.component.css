@@ -1,0 +1,15 @@
+* {
+    direction: rtl;
+}
+
+body {
+    margin-top: 20px;
+}
+
+label, button {
+    float: right;
+}
+
+table {
+    margin-top: 54px;
+}

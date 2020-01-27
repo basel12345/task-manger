@@ -6,11 +6,12 @@ import { ProfileComponent } from './profile.component';
 import { ViewProjectComponent } from './view-project/view-project.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule } from '@agm/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
-	{
-      path: '',
-      component: ProfileComponent
+    {
+        path: '',
+        component: ProfileComponent
     },
     {
         path: 'view-project/:id',
@@ -19,23 +20,24 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    DemoMaterialModule,
-    NgbModule,
-  //   AgmCoreModule.forRoot({
-  //     apiKey: "AIzaSyBPRNfjYT5yCUXp6bz9NDKBt5Pg8HUXimo",
-  //     libraries: ["places", "geometry"]
-  //     /* apiKey is required, unless you are a premium customer, in which case you can use clientId */
-  // })
-],
-  providers:[],
-  declarations: [
-      ProfileComponent,
-      ViewProjectComponent
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        DemoMaterialModule,
+        NgbModule,
+        ReactiveFormsModule,
+        //   AgmCoreModule.forRoot({
+        //     apiKey: "AIzaSyBPRNfjYT5yCUXp6bz9NDKBt5Pg8HUXimo",
+        //     libraries: ["places", "geometry"]
+        //     /* apiKey is required, unless you are a premium customer, in which case you can use clientId */
+        // })
     ],
-  bootstrap: [ProfileComponent]  
+    providers: [],
+    declarations: [
+        ProfileComponent,
+        ViewProjectComponent
+    ],
+    bootstrap: [ProfileComponent]
 })
 
 

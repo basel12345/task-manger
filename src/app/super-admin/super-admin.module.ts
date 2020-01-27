@@ -5,35 +5,35 @@ import { DemoMaterialModule } from '../material.module';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
-	{
-		path: '',
+    {
+        path: '',
         component: SuperAdminComponent,
-        children:[
+        children: [
             { path: '', redirectTo: 'all-projects', pathMatch: 'full' },
             {
-              path: 'add-project',
-              loadChildren: 'src/app/super-admin/add-project/add-project.module#AddProjectModule'
+                path: 'add-project',
+                loadChildren: 'src/app/super-admin/add-project/add-project.module#AddProjectModule'
             },
             {
-              path: 'all-projects',
-              loadChildren: 'src/app/super-admin/all-projects/all-projects.module#AllProjectsModule'
+                path: 'all-projects',
+                loadChildren: 'src/app/super-admin/all-projects/all-projects.module#AllProjectsModule'
             },
             {
-              path: 'empolyee',
-              loadChildren: 'src/app/super-admin/empolyee/empolyee.module#EmpolyeeModule'
+                path: 'empolyee',
+                loadChildren: 'src/app/super-admin/empolyee/empolyee.module#EmpolyeeModule'
             },
             { path: '**', redirectTo: 'all-projects' }
         ]
-	}
+    }
 ];
 
 @NgModule({
-  imports:      [
-       RouterModule.forChild(routes),
-       DemoMaterialModule
-],
-  providers:    [],
-  declarations: [SuperAdminComponent, NavbarComponent]
+    imports: [
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [SuperAdminComponent, NavbarComponent]
 })
 
 

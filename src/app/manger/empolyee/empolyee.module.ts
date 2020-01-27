@@ -6,27 +6,27 @@ import { EmpolyeesComponent } from 'src/app/manger/empolyee/empolyee.component';
 
 
 const routes: Routes = [
-	{
-		path: '',
+    {
+        path: '',
         component: EmpolyeesComponent,
-        children:[
+        children: [
             {
                 path: 'all-empolyee',
                 loadChildren: "src/app/manger/empolyee/all-empolyee/all-empolyee.module#AllEmpolyeeModule"
             }
         ]
-	}
+    }
 ];
 
 @NgModule({
-  imports:      [
-       RouterModule.forChild(routes),
-       DemoMaterialModule
-],
-  providers:    [],
-  declarations: [
-    EmpolyeesComponent
-]
+    imports: [
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [
+        EmpolyeesComponent
+    ]
 })
 
 

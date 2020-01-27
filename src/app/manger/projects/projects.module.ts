@@ -6,33 +6,33 @@ import { AddProjectComponent } from './add-project/add-project.component';
 
 
 const routes: Routes = [
-	{
-		path: '',
+    {
+        path: '',
         component: ProjectsComponent,
-        children:[
+        children: [
             { path: '', redirectTo: 'all-projects', pathMatch: 'full' },
             {
                 path: 'all-projects',
                 loadChildren: "src/app/manger/projects/all-projects/all-projects.module#AllProjectsModule"
             },
             {
-              path: 'add-project',
-              loadChildren: "src/app/manger/projects/add-project/add-project.module#AddProjectModule"
+                path: 'add-project',
+                loadChildren: "src/app/manger/projects/add-project/add-project.module#AddProjectModule"
             },
             { path: '**', redirectTo: 'all-projects' }
         ]
-	}
+    }
 ];
 
 @NgModule({
-  imports:      [
-       RouterModule.forChild(routes),
-       DemoMaterialModule
-],
-  providers:    [],
-  declarations: [
-    ProjectsComponent
-]
+    imports: [
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [
+        ProjectsComponent
+    ]
 })
 
 

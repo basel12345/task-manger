@@ -6,22 +6,22 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
-	{
-		path: '',
+    {
+        path: '',
         component: AllEmpolyeeComponent
-	}
+    }
 ];
 
 @NgModule({
-  imports: [
-    ReactiveFormsModule,
-    RouterModule.forChild(routes),
-    DemoMaterialModule
-],
-  providers: [],
-  declarations: [
-  AllEmpolyeeComponent
-]
+    imports: [
+        ReactiveFormsModule,
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [
+        AllEmpolyeeComponent
+    ]
 })
 
 

@@ -6,22 +6,22 @@ import { AddEmpolyeeComponent } from './add-empolyee.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-	{
-      path: '',
-      component: AddEmpolyeeComponent,
+    {
+        path: '',
+        component: AddEmpolyeeComponent,
     }
 ];
 
 @NgModule({
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    CommonModule,
-    RouterModule.forChild(routes),
-    DemoMaterialModule
-],
-  providers:[],
-  declarations: [AddEmpolyeeComponent]
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        CommonModule,
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [AddEmpolyeeComponent]
 })
 
 

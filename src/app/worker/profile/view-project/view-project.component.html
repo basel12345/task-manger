@@ -1,1 +1,82 @@
-<p>view-project works!</p>
+<body>
+    <div class="container">
+        <form [formGroup]="EmpoleeFrom" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-sm-12">
+                    <label>الانجاز البومي</label>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>تركيب</label>
+                                <textarea formControlName="Installation" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.Installation.errors }"></textarea>
+                                <div *ngIf="submitted && f.Installation.errors" class="invalid-feedback">
+                                    <div class="alert alert-danger" *ngIf="f.Installation.errors.required">يرجى التأكد
+                                        من ادخال تركيب</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>المسارات</label>
+                                <textarea formControlName="Paths" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.Paths.errors }"></textarea>
+                                <div *ngIf="submitted && f.Paths.errors" class="invalid-feedback">
+                                    <div class="alert alert-danger" *ngIf="f.Paths.errors.required">يرجى التأكد من ادخال
+                                        المسارات</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>التقرير</label>
+                        <textarea formControlName="report" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.report.errors }"></textarea>
+                        <div *ngIf="submitted && f.report.errors" class="invalid-feedback">
+                            <div class="alert alert-danger" *ngIf="f.report.errors.required">يرجى التأكد من ادخال
+                                التقرير</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control-file">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>المشاكل</label>
+                        <textarea formControlName="problems" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control-file">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">حفظ</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">اسم العامل</th>
+                    <th scope="col">تركيب</th>
+                    <th scope="col">المسارات</th>
+                    <th scope="col">التقرير</th>
+                    <th scope="col">المشاكل</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ييب</td>
+                    <td>يبي</td>
+                    <td>يبسيبي</td>
+                    <td>يبسيبي</td>
+                    <td>يسيس</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
