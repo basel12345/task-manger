@@ -7,25 +7,25 @@ import { AllEmpolyeeComponent } from './all-empolyee.component';
 import { EditEmpolyeeComponent } from './edit-empolyee/edit-empolyee.component';
 
 const routes: Routes = [
-	{
-      path: '',
-      component: AllEmpolyeeComponent,
-  },
-  {
-    path: 'edit-empolyee/:id',
-    component: EditEmpolyeeComponent
-  }
+    {
+        path: '',
+        component: AllEmpolyeeComponent,
+    },
+    {
+        path: 'edit-empolyee/:id',
+        component: EditEmpolyeeComponent
+    }
 ];
 
 @NgModule({
-  imports: [
-    ReactiveFormsModule,
-    CommonModule,
-    RouterModule.forChild(routes),
-    DemoMaterialModule
-],
-  providers:[],
-  declarations: [AllEmpolyeeComponent, EditEmpolyeeComponent]
+    imports: [
+        ReactiveFormsModule,
+        CommonModule,
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [AllEmpolyeeComponent, EditEmpolyeeComponent]
 })
 
 

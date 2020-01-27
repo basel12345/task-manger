@@ -6,23 +6,23 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-	{
-		path: '',
+    {
+        path: '',
         component: LoginComponent
-	}
+    }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule.forChild(routes),
-    DemoMaterialModule
-],
-  providers: [],
-  declarations: [
-    LoginComponent
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [
+        LoginComponent
+    ]
 })
 
 

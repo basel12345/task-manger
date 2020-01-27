@@ -6,10 +6,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 
 const routes: Routes = [
-	{
-		path: '',
+    {
+        path: '',
         component: MangerComponent,
-        children:[
+        children: [
             { path: '', redirectTo: 'projects', pathMatch: 'full' },
             {
                 path: 'empolyee',
@@ -21,19 +21,19 @@ const routes: Routes = [
             },
             { path: '**', redirectTo: 'projects' }
         ]
-	}
+    }
 ];
 
 @NgModule({
-  imports:      [
-       RouterModule.forChild(routes),
-       DemoMaterialModule
-],
-  providers:    [],
-  declarations: [
-    MangerComponent,
-    NavbarComponent
-]
+    imports: [
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [
+        MangerComponent,
+        NavbarComponent
+    ]
 })
 
 

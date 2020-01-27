@@ -1,67 +1,92 @@
 <body>
-   <div class="container">
-    <table class="table table-dark">
-        <thead>
-          <button type="button" (click)="addProject()" class="btn btn-info add">
-            <i class="fas fa-plus"></i>
-          </button>
-          <tr>
-            <th scope="col">اسم المشروع</th>
-            <th scope="col">وصف المشروع</th>
-            <th scope="col">اسم المدير</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>ييب</td>
-            <td>يبي</td>
-            <td>يبسيبي</td>
-            <td>
-                <mat-menu #appMenu="matMenu">
-                    <button mat-menu-item (click)="remove()">حذف</button>
-                    <button mat-menu-item (click)="edit()">تعديل</button>
-                    <button mat-menu-item (click)="view()">عرض</button>
-                    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content)">اضافة عامل</button>
-                  </mat-menu>
-                  
-                <button mat-icon-button [matMenuTriggerFor]="appMenu">
-                    <mat-icon>more_vert</mat-icon>
+    <div class="container">
+        <table class="table table-dark">
+            <thead>
+                <button type="button" (click)="addProject()" class="btn btn-info add">
+                    <i class="fas fa-plus"></i>
                 </button>
-            </td>
-          </tr>
-        </tbody>
-    </table>
-   </div>
+                <tr>
+                    <th scope="col">اسم المشروع</th>
+                    <th scope="col">وصف المشروع</th>
+                    <th scope="col">اسم المدير</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ييب</td>
+                    <td>يبي</td>
+                    <td>يبسيبي</td>
+                    <td>
+                        <mat-menu #appMenu="matMenu">
+                            <button mat-menu-item (click)="remove()">حذف</button>
+                            <button mat-menu-item (click)="edit()">تعديل</button>
+                            <button mat-menu-item (click)="view()">عرض</button>
+                            <button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content)">اضافة
+                                عامل</button>
+                        </mat-menu>
+
+                        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 
 <ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title">اضافة عامل</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <form [formGroup]="WorkerFrom" (ngSubmit)="onSubmit()">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="form-group">
-              <label>اسم العامل</label>
-              <select formControlName="workerName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.workerName.errors }">
-                <option value="1">sdsada</option>
-            </select>
-            <div *ngIf="submitted && f.workerName.errors" class="invalid-feedback">
-                <div class="alert alert-danger" *ngIf="f.workerName.errors.required">يرجى التأكد من ادخال مدير المشروع</div>
+    <div class="modal-header">
+        <h4 class="modal-title">اضافة عامل</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="WorkerFrom" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>اسم العامل</label>
+                        <select formControlName="workerName" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.workerName.errors }">
+                            <option value="1">sdsada</option>
+                        </select>
+                        <div *ngIf="submitted && f.workerName.errors" class="invalid-feedback">
+                            <div class="alert alert-danger" *ngIf="f.workerName.errors.required">يرجى التأكد من ادخال
+                                اسم العامل</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>المعدات</label>
+                        <textarea formControlName="equip" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.equip.errors }"></textarea>
+                        <div *ngIf="submitted && f.equip.errors" class="invalid-feedback">
+                            <div class="alert alert-danger" *ngIf="f.equip.errors.required">يرجى التأكد من ادخال المعدات
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>الأجهزه</label>
+                        <textarea formControlName="devices" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.devices.errors }"></textarea>
+                        <div *ngIf="submitted && f.devices.errors" class="invalid-feedback">
+                            <div class="alert alert-danger" *ngIf="f.devices.errors.required">يرجى التأكد من ادخال
+                                الأجهزه</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">حفظ</button>
-    </form> 
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">اغلاق</button>
-  </div>
+            <button type="submit" class="btn btn-primary">حفظ</button>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">اغلاق</button>
+    </div>
 </ng-template>

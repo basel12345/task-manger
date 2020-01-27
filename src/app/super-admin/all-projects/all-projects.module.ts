@@ -8,9 +8,9 @@ import { EditProjectComponent } from './edit-project/edit-project.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
-	{
-      path: '',
-      component: AllProjectsComponent,
+    {
+        path: '',
+        component: AllProjectsComponent,
     },
     {
         path: 'edit-project/:id',
@@ -23,18 +23,18 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    ReactiveFormsModule,
-    CommonModule,
-    RouterModule.forChild(routes),
-    DemoMaterialModule
-],
-  providers:[],
-  declarations: [
-    AllProjectsComponent,
-    ViewProjectComponent,
-    EditProjectComponent
-  ]
+    imports: [
+        ReactiveFormsModule,
+        CommonModule,
+        RouterModule.forChild(routes),
+        DemoMaterialModule
+    ],
+    providers: [],
+    declarations: [
+        AllProjectsComponent,
+        ViewProjectComponent,
+        EditProjectComponent
+    ]
 })
 
 

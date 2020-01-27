@@ -1,45 +1,54 @@
 <body>
     <div class="container">
-        <form  [formGroup]="EmpoleeyFrom" (ngSubmit)="onSubmit()">
+        <form [formGroup]="EmpoleeyFrom" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label>اسم الموظف</label>
-                        <input  formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                        <input formControlName="name" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
                         <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                            <div class="alert alert-danger" *ngIf="f.name.errors.required">يرجى التأكد من ادخال اسم الموظف</div>
+                            <div class="alert alert-danger" *ngIf="f.name.errors.required">يرجى التأكد من ادخال اسم
+                                الموظف</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label>البريد الالكتروني</label>
-                        <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                        <input type="email" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
                         <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                            <div class="alert alert-danger" *ngIf="f.email.errors.required">يرجى التأكد من ادخال اسم الموظف</div>
-                            <div class="alert alert-danger" *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                            <div class="alert alert-danger" *ngIf="f.email.errors.required">يرجى التأكد من ادخال اسم
+                                الموظف</div>
+                            <div class="alert alert-danger" *ngIf="f.email.errors.email">Email must be a valid email
+                                address</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label>التليفون</label>
-                        <input  formControlName="telephone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }">
+                        <input formControlName="telephone" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }">
                         <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
-                            <div class="alert alert-danger" *ngIf="f.telephone.errors.required">يرجى التأكد من ادخال التليفون</div>
+                            <div class="alert alert-danger" *ngIf="f.telephone.errors.required">يرجى التأكد من ادخال
+                                التليفون</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label>الدور الوظيفي</label>
-                        <select formControlName="role" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
+                        <select formControlName="role" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
                             <option value="1">super admin</option>
                             <option value="2">Manger</option>
                             <option value="3">worker</option>
                         </select>
                         <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
-                            <div class="alert alert-danger" *ngIf="f.role.errors.required">يرجى التأكد من ادخال الدور الوظيفي</div>
+                            <div class="alert alert-danger" *ngIf="f.role.errors.required">يرجى التأكد من ادخال الدور
+                                الوظيفي</div>
                         </div>
                     </div>
                 </div>

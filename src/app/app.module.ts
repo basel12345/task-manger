@@ -11,20 +11,20 @@ import { IconsComponent } from './icons/icons.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    IconsComponent,
-    FooterComponent
-  ],
-  imports: [
-    ReactiveFormsModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgbModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        IconsComponent,
+        FooterComponent
+    ],
+    imports: [
+        ReactiveFormsModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        NgbModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

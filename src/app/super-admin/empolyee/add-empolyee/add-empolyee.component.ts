@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
-  selector: 'app-empolyee',
-  templateUrl: 'add-empolyee.component.html',
-  styleUrls: ['add-empolyee.component.css']
+    selector: 'app-empolyee',
+    templateUrl: 'add-empolyee.component.html',
+    styleUrls: ['add-empolyee.component.css']
 })
 export class AddEmpolyeeComponent implements OnInit {
     EmpoleeyFrom: FormGroup;
@@ -16,30 +16,30 @@ export class AddEmpolyeeComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-      this.EmpoleeyFrom = this.formBuilder.group({
-        name: ['', Validators.required],
-        email: ['',  [Validators.required, Validators.email]],
-        telephone: ['',  Validators.required],
-        role: ['', Validators.required],
-        deleteProject: ['', Validators.required]
-      });
+        this.EmpoleeyFrom = this.formBuilder.group({
+            name: ['', Validators.required],
+            email: ['', [Validators.required, Validators.email]],
+            telephone: ['', Validators.required],
+            role: ['', Validators.required],
+            deleteProject: ['', Validators.required]
+        });
     }
-  
+
     get f() { return this.EmpoleeyFrom.controls; }
-  
+
     onSubmit() {
-      console.log(this.EmpoleeyFrom.value)
-      this.submitted = false;
-      // stop here if form is invalid
-      if (this.EmpoleeyFrom.invalid) {
-          this.submitted = true;
-          return;
-      }
-      this.EmpoleeyFrom.reset();
+        console.log(this.EmpoleeyFrom.value)
+        this.submitted = false;
+        // stop here if form is invalid
+        if (this.EmpoleeyFrom.invalid) {
+            this.submitted = true;
+            return;
+        }
+        this.EmpoleeyFrom.reset();
     }
 
     getRoleId(event) {
-      this.id = event;
+        this.id = event;
     }
 
 }
